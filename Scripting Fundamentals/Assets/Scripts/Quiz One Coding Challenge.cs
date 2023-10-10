@@ -9,7 +9,7 @@ public class QuizOneCodingChallenge : MonoBehaviour
     
     public int Score = 0;
     public string PlayerName = "Anthony";
-    public bool ISplayerActive = true;
+    public int Health = 100;
 
     // Private Member/Gobal Varible 
     
@@ -17,7 +17,9 @@ public class QuizOneCodingChallenge : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        IncreasingScore();
+        PrintPlayerName();
+        DecreaseHealth();
     }
 
     // Update is called once per frame
@@ -27,8 +29,18 @@ public class QuizOneCodingChallenge : MonoBehaviour
     }
 
     // Method Increase score 
-    private void UpdateScore(int amount)
+    private void IncreasingScore()
     {
-        
+        Score = Score + 10;
+    }
+    
+    private void PrintPlayerName()
+    {
+        Debug.Log(PlayerName);
+    }
+
+    private void DecreaseHealth()
+    {
+        Health = Health - 20;
     }
 }
