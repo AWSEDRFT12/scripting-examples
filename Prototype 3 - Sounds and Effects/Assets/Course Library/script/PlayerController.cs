@@ -35,7 +35,7 @@ public class PlayerController : MonoBehaviour
             IsOnGround = false;
             _playerAnim.SetTrigger("Jump_trig");
             _playerAudio.PlayOneShot(JumpSound, 1.0f);
-            DirtParticle.Stop(); 
+            DirtParticle.Stop();
         }
     }
 
